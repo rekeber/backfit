@@ -1,0 +1,1163 @@
+2025-12-21 23:29:20 [main] INFO  com.fitlife.FitLifeApplication - Starting FitLifeApplication using Java 17.0.12 with PID 23060 (C:\Users\Marpinper\Downloads\kiro\backend\target\classes started by Marpinper in C:\Users\Marpinper\Downloads\kiro\backend)
+2025-12-21 23:29:20 [main] DEBUG com.fitlife.FitLifeApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-21 23:29:20 [main] INFO  com.fitlife.FitLifeApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fitlife.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-12-21 23:29:21 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-12-21 23:29:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 23:29:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 23:29:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-21 23:29:22 [main] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2025-12-21 23:29:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2072 ms
+2025-12-21 23:29:23 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 23:29:23 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 23:29:23 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 23:29:23 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 23:29:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 23:29:24 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitlife.FitLifeApplication.main(FitLifeApplication.java:16)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 50 common frames omitted
+2025-12-21 23:29:24 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitlife.FitLifeApplication.main(FitLifeApplication.java:16)
+2025-12-21 23:29:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-21 23:29:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 23:29:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 23:29:26 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:67)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:295)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:295)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitlife.FitLifeApplication.main(FitLifeApplication.java:16)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 54 common frames omitted
+2025-12-21 23:29:26 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2025-12-21 23:29:26 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2025-12-21 23:29:26 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+2025-12-21 23:29:26 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+2025-12-21 23:29:26 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-21 23:29:26 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-21 23:29:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitlife.FitLifeApplication.main(FitLifeApplication.java:16)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:67)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:295)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:295)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 40 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 54 common frames omitted
+2025-12-21 23:31:54 [main] INFO  com.fitlife.FitLifeApplication - Starting FitLifeApplication using Java 17.0.12 with PID 13812 (C:\Users\Marpinper\Downloads\kiro\backend\target\classes started by Marpinper in C:\Users\Marpinper\Downloads\kiro\backend)
+2025-12-21 23:31:54 [main] DEBUG com.fitlife.FitLifeApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-21 23:31:54 [main] INFO  com.fitlife.FitLifeApplication - The following 1 profile is active: "dev"
+2025-12-21 23:31:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 23:31:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 23:31:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interface.
+2025-12-21 23:31:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 23:31:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 23:31:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-21 23:31:56 [main] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2025-12-21 23:31:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1763 ms
+2025-12-21 23:31:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 23:31:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fitlife_dev user=SA
+2025-12-21 23:31:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 23:31:56 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:fitlife_dev'
+2025-12-21 23:31:56 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 23:31:56 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 23:31:56 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 23:31:56 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 23:31:56 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2025-12-21 23:31:56 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-21 23:31:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       drop constraint if exists FKeu9uxuaat96p1xfwo0bb74c7g
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       drop constraint if exists FKrbmkvhmau5lnjtgcaba3bve7c
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       drop constraint if exists FK31bf7nthvor0cn4gijlt6cnas
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       drop constraint if exists FKqn0qqy3tf4bnexapvdh7tjati
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKtcmqalc5v4qdt1slgcsa544i5
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKcchlh48b4347amfvmke793bg7
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       drop constraint if exists FK4mclrynvl1em11jh8sxt5s74k
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       drop constraint if exists FKnc8q26gyv8uhhqp6y8dchh7hx
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FK11y5boh1e7gh60rdqixyetv3x
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FKk08ugelrh9cea1oew3hgxryw2
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_allergens cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_categories cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_minerals cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_vitamins cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists foods cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists friend_requests cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_allergies cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_dietary_restrictions cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_friends cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table food_allergens (
+        food_id bigint not null,
+        allergen varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table food_categories (
+        food_id bigint not null,
+        category varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table food_minerals (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table food_vitamins (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table foods (
+        calories_per_100g float(53) not null,
+        carbs_per_100g float(53) not null,
+        fat_per_100g float(53) not null,
+        fiber_per_100g float(53) not null,
+        glycemic_index float(53),
+        is_active boolean not null,
+        is_healthy boolean not null,
+        protein_per_100g float(53) not null,
+        created_at timestamp(6) not null,
+        created_by bigint,
+        id bigserial not null,
+        updated_at timestamp(6),
+        verified_by bigint,
+        description varchar(1000),
+        barcode varchar(255),
+        brand varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        serving_size varchar(255),
+        verification_status varchar(255) check (verification_status in ('PENDING','VERIFIED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table friend_requests (
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        receiver_id bigint not null,
+        sender_id bigint not null,
+        updated_at timestamp(6),
+        status varchar(255) not null check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table user_allergies (
+        user_id bigint not null,
+        allergy varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table user_dietary_restrictions (
+        user_id bigint not null,
+        restriction varchar(255)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table user_friends (
+        friend_id bigint not null,
+        user_id bigint not null,
+        primary key (friend_id, user_id)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer not null,
+        current_weight float(53) not null,
+        email_verified boolean not null,
+        height float(53) not null,
+        is_active boolean not null,
+        streak_days integer not null,
+        target_weight float(53) not null,
+        total_points integer not null,
+        total_weight_lost float(53) not null,
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        last_login timestamp(6),
+        updated_at timestamp(6),
+        activity_level varchar(255) not null check (activity_level in ('SEDENTARIO','LIGERO','MODERADO','ACTIVO','MUY_ACTIVO')),
+        email varchar(255) not null unique,
+        goal varchar(255) not null check (goal in ('PERDER_PESO','MANTENER','GANAR_MUSCULO')),
+        name varchar(255) not null,
+        password varchar(255) not null,
+        profile_image_url varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN','NUTRITIONIST','TRAINER')),
+        primary key (id)
+    )
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       add constraint FKeu9uxuaat96p1xfwo0bb74c7g 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       add constraint FKrbmkvhmau5lnjtgcaba3bve7c 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       add constraint FK31bf7nthvor0cn4gijlt6cnas 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       add constraint FKqn0qqy3tf4bnexapvdh7tjati 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKtcmqalc5v4qdt1slgcsa544i5 
+       foreign key (receiver_id) 
+       references users
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKcchlh48b4347amfvmke793bg7 
+       foreign key (sender_id) 
+       references users
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       add constraint FK4mclrynvl1em11jh8sxt5s74k 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       add constraint FKnc8q26gyv8uhhqp6y8dchh7hx 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FK11y5boh1e7gh60rdqixyetv3x 
+       foreign key (friend_id) 
+       references users
+2025-12-21 23:31:57 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FKk08ugelrh9cea1oew3hgxryw2 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:31:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 23:31:58 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 23:31:58 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authService' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\service\AuthService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\security\JwtTokenProvider.class]: Failed to instantiate [com.fitlife.security.JwtTokenProvider]: Constructor threw exception
+2025-12-21 23:31:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       drop constraint if exists FKeu9uxuaat96p1xfwo0bb74c7g
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       drop constraint if exists FKrbmkvhmau5lnjtgcaba3bve7c
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       drop constraint if exists FK31bf7nthvor0cn4gijlt6cnas
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       drop constraint if exists FKqn0qqy3tf4bnexapvdh7tjati
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKtcmqalc5v4qdt1slgcsa544i5
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKcchlh48b4347amfvmke793bg7
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       drop constraint if exists FK4mclrynvl1em11jh8sxt5s74k
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       drop constraint if exists FKnc8q26gyv8uhhqp6y8dchh7hx
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FK11y5boh1e7gh60rdqixyetv3x
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FKk08ugelrh9cea1oew3hgxryw2
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_allergens cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_categories cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_minerals cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_vitamins cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists foods cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists friend_requests cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_allergies cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_dietary_restrictions cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_friends cascade
+2025-12-21 23:31:58 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2025-12-21 23:31:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 23:31:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 23:31:58 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-21 23:31:58 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-21 23:31:58 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authService' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\service\AuthService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\security\JwtTokenProvider.class]: Failed to instantiate [com.fitlife.security.JwtTokenProvider]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.fitlife.FitLifeApplication.main(FitLifeApplication.java:16)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authService' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\service\AuthService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\security\JwtTokenProvider.class]: Failed to instantiate [com.fitlife.security.JwtTokenProvider]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider' defined in file [C:\Users\Marpinper\Downloads\kiro\backend\target\classes\com\fitlife\security\JwtTokenProvider.class]: Failed to instantiate [com.fitlife.security.JwtTokenProvider]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:322)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fitlife.security.JwtTokenProvider]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:319)
+	... 47 common frames omitted
+Caused by: io.jsonwebtoken.security.WeakKeyException: The specified key byte array is 88 bits which is not secure enough for any JWT HMAC-SHA algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HMAC-SHA algorithms MUST have a size >= 256 bits (the key size must be greater than or equal to the hash output size).  Consider using the Jwts.SIG.HS256.key() builder (or HS384.key() or HS512.key()) to create a key guaranteed to be secure enough for your preferred HMAC-SHA algorithm.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+	at io.jsonwebtoken.security.Keys.hmacShaKeyFor(Keys.java:83)
+	at com.fitlife.security.JwtTokenProvider.<init>(JwtTokenProvider.java:24)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 49 common frames omitted
+2025-12-21 23:34:35 [main] INFO  com.fitlife.FitLifeApplication - Starting FitLifeApplication using Java 17.0.12 with PID 25248 (C:\Users\Marpinper\Downloads\kiro\backend\target\classes started by Marpinper in C:\Users\Marpinper\Downloads\kiro\backend)
+2025-12-21 23:34:35 [main] DEBUG com.fitlife.FitLifeApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-21 23:34:35 [main] INFO  com.fitlife.FitLifeApplication - The following 1 profile is active: "dev"
+2025-12-21 23:34:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 23:34:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 23:34:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-12-21 23:34:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 23:34:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 23:34:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-21 23:34:37 [main] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2025-12-21 23:34:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1905 ms
+2025-12-21 23:34:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 23:34:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fitlife_dev user=SA
+2025-12-21 23:34:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 23:34:37 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:fitlife_dev'
+2025-12-21 23:34:37 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 23:34:37 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 23:34:37 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 23:34:38 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 23:34:38 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2025-12-21 23:34:38 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-21 23:34:38 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       drop constraint if exists FKeu9uxuaat96p1xfwo0bb74c7g
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       drop constraint if exists FKrbmkvhmau5lnjtgcaba3bve7c
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       drop constraint if exists FK31bf7nthvor0cn4gijlt6cnas
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       drop constraint if exists FKqn0qqy3tf4bnexapvdh7tjati
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKtcmqalc5v4qdt1slgcsa544i5
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKcchlh48b4347amfvmke793bg7
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       drop constraint if exists FK4mclrynvl1em11jh8sxt5s74k
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       drop constraint if exists FKnc8q26gyv8uhhqp6y8dchh7hx
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FK11y5boh1e7gh60rdqixyetv3x
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FKk08ugelrh9cea1oew3hgxryw2
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_allergens cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_categories cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_minerals cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_vitamins cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists foods cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists friend_requests cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_allergies cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_dietary_restrictions cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_friends cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table food_allergens (
+        food_id bigint not null,
+        allergen varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table food_categories (
+        food_id bigint not null,
+        category varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table food_minerals (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table food_vitamins (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table foods (
+        calories_per_100g float(53) not null,
+        carbs_per_100g float(53) not null,
+        fat_per_100g float(53) not null,
+        fiber_per_100g float(53) not null,
+        glycemic_index float(53),
+        is_active boolean not null,
+        is_healthy boolean not null,
+        protein_per_100g float(53) not null,
+        created_at timestamp(6) not null,
+        created_by bigint,
+        id bigserial not null,
+        updated_at timestamp(6),
+        verified_by bigint,
+        description varchar(1000),
+        barcode varchar(255),
+        brand varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        serving_size varchar(255),
+        verification_status varchar(255) check (verification_status in ('PENDING','VERIFIED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table friend_requests (
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        receiver_id bigint not null,
+        sender_id bigint not null,
+        updated_at timestamp(6),
+        status varchar(255) not null check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table user_allergies (
+        user_id bigint not null,
+        allergy varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table user_dietary_restrictions (
+        user_id bigint not null,
+        restriction varchar(255)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table user_friends (
+        friend_id bigint not null,
+        user_id bigint not null,
+        primary key (friend_id, user_id)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer not null,
+        current_weight float(53) not null,
+        email_verified boolean not null,
+        height float(53) not null,
+        is_active boolean not null,
+        streak_days integer not null,
+        target_weight float(53) not null,
+        total_points integer not null,
+        total_weight_lost float(53) not null,
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        last_login timestamp(6),
+        updated_at timestamp(6),
+        activity_level varchar(255) not null check (activity_level in ('SEDENTARIO','LIGERO','MODERADO','ACTIVO','MUY_ACTIVO')),
+        email varchar(255) not null unique,
+        goal varchar(255) not null check (goal in ('PERDER_PESO','MANTENER','GANAR_MUSCULO')),
+        name varchar(255) not null,
+        password varchar(255) not null,
+        profile_image_url varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN','NUTRITIONIST','TRAINER')),
+        primary key (id)
+    )
+2025-12-21 23:34:38 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       add constraint FKeu9uxuaat96p1xfwo0bb74c7g 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       add constraint FKrbmkvhmau5lnjtgcaba3bve7c 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       add constraint FK31bf7nthvor0cn4gijlt6cnas 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       add constraint FKqn0qqy3tf4bnexapvdh7tjati 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKtcmqalc5v4qdt1slgcsa544i5 
+       foreign key (receiver_id) 
+       references users
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKcchlh48b4347amfvmke793bg7 
+       foreign key (sender_id) 
+       references users
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       add constraint FK4mclrynvl1em11jh8sxt5s74k 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       add constraint FKnc8q26gyv8uhhqp6y8dchh7hx 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FK11y5boh1e7gh60rdqixyetv3x 
+       foreign key (friend_id) 
+       references users
+2025-12-21 23:34:39 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FKk08ugelrh9cea1oew3hgxryw2 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:34:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 23:34:39 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 23:34:39 [main] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-12-21 23:34:39 [main] INFO  c.fitlife.service.MockRedisService - Usando MockRedisService para desarrollo (Redis deshabilitado)
+2025-12-21 23:34:40 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-21 23:34:40 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoint(s) beneath base path '/actuator'
+2025-12-21 23:34:40 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3086155a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c68550d, org.springframework.security.web.context.SecurityContextHolderFilter@6790aad2, org.springframework.security.web.header.HeaderWriterFilter@33b92d63, org.springframework.web.filter.CorsFilter@31cced7, org.springframework.security.web.authentication.logout.LogoutFilter@d9fe131, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24d25c43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74ddae54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2928c493, org.springframework.security.web.session.SessionManagementFilter@28a80cb0, org.springframework.security.web.access.ExceptionTranslationFilter@66604e6f, org.springframework.security.web.access.intercept.AuthorizationFilter@4468fdae]
+2025-12-21 23:34:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2025-12-21 23:34:41 [main] INFO  com.fitlife.FitLifeApplication - Started FitLifeApplication in 6.374 seconds (process running for 6.758)
+2025-12-21 23:35:11 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 23:35:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 23:35:11 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-12-21 23:35:11 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-12-21 23:35:11 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-12-21 23:35:11 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/actuator/health' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-12-21 23:35:11 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /actuator/health
+2025-12-21 23:35:12 [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1805)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1736)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1538)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1518)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1478)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1515)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1224)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:1099)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:130)
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:67)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:228)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:215)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1734)
+	... 16 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-21 23:36:00 [main] INFO  com.fitlife.FitLifeApplication - Starting FitLifeApplication using Java 17.0.12 with PID 15980 (C:\Users\Marpinper\Downloads\kiro\backend\target\classes started by Marpinper in C:\Users\Marpinper\Downloads\kiro\backend)
+2025-12-21 23:36:00 [main] DEBUG com.fitlife.FitLifeApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-21 23:36:00 [main] INFO  com.fitlife.FitLifeApplication - The following 1 profile is active: "dev"
+2025-12-21 23:36:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 23:36:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 23:36:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157 ms. Found 1 JPA repository interface.
+2025-12-21 23:36:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-21 23:36:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-21 23:36:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-21 23:36:02 [main] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2025-12-21 23:36:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1952 ms
+2025-12-21 23:36:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 23:36:02 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fitlife_dev user=SA
+2025-12-21 23:36:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 23:36:02 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:fitlife_dev'
+2025-12-21 23:36:02 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 23:36:02 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 23:36:02 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 23:36:03 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 23:36:03 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2025-12-21 23:36:03 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-21 23:36:03 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       drop constraint if exists FKeu9uxuaat96p1xfwo0bb74c7g
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       drop constraint if exists FKrbmkvhmau5lnjtgcaba3bve7c
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       drop constraint if exists FK31bf7nthvor0cn4gijlt6cnas
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       drop constraint if exists FKqn0qqy3tf4bnexapvdh7tjati
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKtcmqalc5v4qdt1slgcsa544i5
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       drop constraint if exists FKcchlh48b4347amfvmke793bg7
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       drop constraint if exists FK4mclrynvl1em11jh8sxt5s74k
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       drop constraint if exists FKnc8q26gyv8uhhqp6y8dchh7hx
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FK11y5boh1e7gh60rdqixyetv3x
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       drop constraint if exists FKk08ugelrh9cea1oew3hgxryw2
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_allergens cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_categories cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_minerals cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists food_vitamins cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists foods cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists friend_requests cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_allergies cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_dietary_restrictions cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists user_friends cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table food_allergens (
+        food_id bigint not null,
+        allergen varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table food_categories (
+        food_id bigint not null,
+        category varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table food_minerals (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table food_vitamins (
+        amount float(53),
+        food_id bigint not null,
+        nutrient_name varchar(255),
+        unit varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table foods (
+        calories_per_100g float(53) not null,
+        carbs_per_100g float(53) not null,
+        fat_per_100g float(53) not null,
+        fiber_per_100g float(53) not null,
+        glycemic_index float(53),
+        is_active boolean not null,
+        is_healthy boolean not null,
+        protein_per_100g float(53) not null,
+        created_at timestamp(6) not null,
+        created_by bigint,
+        id bigserial not null,
+        updated_at timestamp(6),
+        verified_by bigint,
+        description varchar(1000),
+        barcode varchar(255),
+        brand varchar(255),
+        image_url varchar(255),
+        name varchar(255) not null,
+        serving_size varchar(255),
+        verification_status varchar(255) check (verification_status in ('PENDING','VERIFIED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table friend_requests (
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        receiver_id bigint not null,
+        sender_id bigint not null,
+        updated_at timestamp(6),
+        status varchar(255) not null check (status in ('PENDING','ACCEPTED','REJECTED')),
+        primary key (id)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table user_allergies (
+        user_id bigint not null,
+        allergy varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table user_dietary_restrictions (
+        user_id bigint not null,
+        restriction varchar(255)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table user_friends (
+        friend_id bigint not null,
+        user_id bigint not null,
+        primary key (friend_id, user_id)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        age integer not null,
+        current_weight float(53) not null,
+        email_verified boolean not null,
+        height float(53) not null,
+        is_active boolean not null,
+        streak_days integer not null,
+        target_weight float(53) not null,
+        total_points integer not null,
+        total_weight_lost float(53) not null,
+        created_at timestamp(6) not null,
+        id bigserial not null,
+        last_login timestamp(6),
+        updated_at timestamp(6),
+        activity_level varchar(255) not null check (activity_level in ('SEDENTARIO','LIGERO','MODERADO','ACTIVO','MUY_ACTIVO')),
+        email varchar(255) not null unique,
+        goal varchar(255) not null check (goal in ('PERDER_PESO','MANTENER','GANAR_MUSCULO')),
+        name varchar(255) not null,
+        password varchar(255) not null,
+        profile_image_url varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN','NUTRITIONIST','TRAINER')),
+        primary key (id)
+    )
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_allergens 
+       add constraint FKeu9uxuaat96p1xfwo0bb74c7g 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_categories 
+       add constraint FKrbmkvhmau5lnjtgcaba3bve7c 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_minerals 
+       add constraint FK31bf7nthvor0cn4gijlt6cnas 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists food_vitamins 
+       add constraint FKqn0qqy3tf4bnexapvdh7tjati 
+       foreign key (food_id) 
+       references foods
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKtcmqalc5v4qdt1slgcsa544i5 
+       foreign key (receiver_id) 
+       references users
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists friend_requests 
+       add constraint FKcchlh48b4347amfvmke793bg7 
+       foreign key (sender_id) 
+       references users
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_allergies 
+       add constraint FK4mclrynvl1em11jh8sxt5s74k 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_dietary_restrictions 
+       add constraint FKnc8q26gyv8uhhqp6y8dchh7hx 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FK11y5boh1e7gh60rdqixyetv3x 
+       foreign key (friend_id) 
+       references users
+2025-12-21 23:36:03 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists user_friends 
+       add constraint FKk08ugelrh9cea1oew3hgxryw2 
+       foreign key (user_id) 
+       references users
+2025-12-21 23:36:03 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 23:36:04 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-21 23:36:04 [main] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-12-21 23:36:04 [main] INFO  c.fitlife.service.MockRedisService - Usando MockRedisService para desarrollo (Redis deshabilitado)
+2025-12-21 23:36:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-21 23:36:05 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoint(s) beneath base path '/actuator'
+2025-12-21 23:36:05 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@160e6384, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@584bfadb, org.springframework.security.web.context.SecurityContextHolderFilter@73d76b9d, org.springframework.security.web.header.HeaderWriterFilter@1d0b4fe4, org.springframework.web.filter.CorsFilter@7bd6185a, org.springframework.security.web.authentication.logout.LogoutFilter@5ef98f3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@704e27f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@321c6e0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37844399, org.springframework.security.web.session.SessionManagementFilter@613b9bd9, org.springframework.security.web.access.ExceptionTranslationFilter@15bb3db9, org.springframework.security.web.access.intercept.AuthorizationFilter@b939971]
+2025-12-21 23:36:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2025-12-21 23:36:06 [main] INFO  com.fitlife.FitLifeApplication - Started FitLifeApplication in 6.104 seconds (process running for 6.512)
+2025-12-21 23:36:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21 23:36:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-21 23:36:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-21 23:36:17 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-12-21 23:36:17 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-12-21 23:36:17 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/actuator/health' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-12-21 23:36:17 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /actuator/health
+2025-12-21 23:36:35 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /actuator/health
+2025-12-21 23:36:35 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-12-21 23:36:35 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /actuator/health
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/register
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-12-21 23:37:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.Http403ForbiddenEntryPoint - Pre-authenticated entry point called. Rejecting access

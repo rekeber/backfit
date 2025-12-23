@@ -1,0 +1,227 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: fitlife-backend
+  
+  # Base de Datos PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fitlife_db
+    username: ${DB_USERNAME:fitlife_user}
+    password: ${DB_PASSWORD:fitlife_password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  
+  # JPA/Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+  
+  # Flyway para migraciones
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+  
+  # Redis Cache
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+  
+  # Cache
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000 # 10 minutos
+  
+  # Seguridad
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI:http://localhost:8080}
+  
+  # Multipart para subida de archivos
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:fitlife-super-secure-jwt-secret-key-for-development-environment-2024}
+  expiration: 86400000 # 24 horas
+  refresh-expiration: 604800000 # 7 días
+
+# IA Configuration
+ai:
+  google:
+    api-key: ${GOOGLE_AI_API_KEY:your-api-key}
+    project-id: ${GOOGLE_PROJECT_ID:your-project-id}
+  
+  openai:
+    api-key: ${OPENAI_API_KEY:your-openai-key}
+
+# Firebase Configuration
+firebase:
+  credentials-path: ${FIREBASE_CREDENTIALS_PATH:firebase-credentials.json}
+  database-url: ${FIREBASE_DATABASE_URL:https://your-project.firebaseio.com}
+
+# Configuración de la aplicación
+app:
+  cors:
+    allowed-origins: 
+      - http://localhost:3000
+      - https://fitlife.app
+  
+  file-storage:
+    upload-dir: ${FILE_UPLOAD_DIR:./uploads}
+    max-size: 10485760 # 10MB
+  
+  notification:
+    enabled: true
+    batch-size: 100
+  
+  ai:
+    enabled: true
+    cache-ttl: 3600 # 1 hora
+
+# Actuator para monitoreo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when-authorized
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging
+logging:
+  level:
+    com.fitlife: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/fitlife-backend.log
+
+# OpenAPI/Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+---
+# Perfil de Desarrollo
+spring:
+  config:
+    activate:
+      on-profile: dev
+  
+  datasource:
+    url: jdbc:h2:mem:fitlife_dev
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  # Deshabilitar Redis para desarrollo
+  data:
+    redis:
+      repositories:
+        enabled: false
+  cache:
+    type: simple
+  
+  # Deshabilitar configuración de Redis completamente
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+
+logging:
+  level:
+    root: INFO
+    com.fitlife: DEBUG
+
+---
+# Perfil de Testing
+spring:
+  config:
+    activate:
+      on-profile: test
+  
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+
+---
+# Perfil de Producción
+spring:
+  config:
+    activate:
+      on-profile: prod
+  
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+logging:
+  level:
+    root: WARN
+    com.fitlife: INFO
