@@ -1,0 +1,85 @@
+# ===================================
+# BACKEND (SPRING BOOT) - GITIGNORE
+# ===================================
+
+# ===== JAVA COMPILED FILES =====
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ===== MAVEN =====
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.mvn/
+mvnw
+mvnw.cmd
+
+# ===== GRADLE =====
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ===== SPRING BOOT =====
+hs_err_pid*
+replay_pid*
+
+# ===== IDEs =====
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.settings/
+.project
+.classpath
+bin/
+
+# ===== LOGS =====
+logs/
+*.log
+*.log.*
+*.out
+*.lst
+
+# ===== VARIABLES DE ENTORNO =====
+.env
+.env.local
+.env.development
+.env.production
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# ===== BASE DE DATOS =====
+*.db
+*.sqlite
+*.sqlite3
+data/
+h2/
+
+# ===== ARCHIVOS SENSIBLES =====
+firebase-credentials.json
+google-credentials.json
+*.pem
+*.key
+*.crt
+*.p12
+*.keystore
+*.jks
+
+# ===== TEMPORALES =====
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ===== SISTEMA =====
+.DS_Store
+Thumbs.db
