@@ -52,8 +52,8 @@ public class AuthService {
             .height(request.getHeight())
             .currentWeight(request.getCurrentWeight())
             .targetWeight(request.getTargetWeight())
-            .activityLevel(request.getActivityLevel())
-            .goal(request.getGoal())
+            .activityLevel(request.getActivityLevelEnum()) // Usar método helper
+            .goal(request.getGoalEnum()) // Usar método helper
             .dietaryRestrictions(request.getDietaryRestrictions() != null ? 
                                request.getDietaryRestrictions() : new HashSet<>())
             .allergies(request.getAllergies() != null ? 

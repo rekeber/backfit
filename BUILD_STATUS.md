@@ -2,12 +2,32 @@
 
 ## ✅ **BACKEND FUNCIONANDO CORRECTAMENTE** 
 
-**Fecha**: 21 de Diciembre, 2025  
-**Estado**: ✅ **LISTO PARA USAR**
+**Fecha**: 23 de Diciembre, 2025  
+**Estado**: ✅ **LISTO PARA INTEGRACIÓN COMPLETA**
 
 ---
 
-## 🔧 Problemas Resueltos
+## 🔧 Problemas Resueltos Recientemente
+
+### ✅ **Configuración de Seguridad (NUEVO)**
+- **Problema**: Endpoints de autenticación bloqueados por configuración de seguridad
+- **Error**: `403 Forbidden` en `/auth/register`
+- **Solución**: Corregida configuración de SecurityConfig para permitir `/auth/**` en lugar de `/api/v1/auth/**`
+- **Estado**: ✅ **RESUELTO**
+
+### ✅ **Compatibilidad de DTOs (NUEVO)**
+- **Problema**: Backend esperaba enums (`User.ActivityLevel`, `User.Goal`) pero Android enviaba strings
+- **Error**: Deserialización fallaba en RegisterRequest
+- **Solución**: Actualizado RegisterRequest para aceptar strings y convertir a enums internamente
+- **Estado**: ✅ **RESUELTO**
+
+### ✅ **Prueba de Registro Exitosa (NUEVO)**
+- **Endpoint**: `POST /api/v1/auth/register`
+- **Status**: 201 Created ✅
+- **Usuario**: Creado con ID: 1 en base de datos H2
+- **JWT Token**: Generado y devuelto correctamente
+- **Email**: Verificación enviada (MockEmailService)
+- **Estado**: ✅ **FUNCIONANDO PERFECTAMENTE**
 
 ### ✅ **JWT Secret Key Security**
 - **Problema**: JWT secret key era demasiado corto (88 bits) - "The specified key byte array is 88 bits which is not secure enough for any JWT HMAC-SHA algorithm"

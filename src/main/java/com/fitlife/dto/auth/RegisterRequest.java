@@ -47,12 +47,29 @@ public class RegisterRequest {
     @DecimalMax(value = "300.0", message = "Peso objetivo máximo es 300 kg")
     private Double targetWeight;
     
-    @NotNull(message = "Nivel de actividad es obligatorio")
-    private User.ActivityLevel activityLevel;
+    @NotBlank(message = "Nivel de actividad es obligatorio")
+    private String activityLevel; // Cambiado de enum a String
     
-    @NotNull(message = "Objetivo es obligatorio")
-    private User.Goal goal;
+    @NotBlank(message = "Objetivo es obligatorio")
+    private String goal; // Cambiado de enum a String
     
     private Set<String> dietaryRestrictions;
     private Set<String> allergies;
+    
+    // Métodos helper para convertir strings a enums
+    public User.ActivityLevel getActivityLevelEnum() {
+        try {
+            return User.ActivityLevel.valueOf(activityLevel.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Nivel de actividad inválido: " + activityLevel);
+        }
+    }
+    
+    public User.Goal getGoalEnum() {
+        try {
+            return User.Goal.valueOf(goal.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Objetivo inválido: " + goal);
+        }
+    }
 }
