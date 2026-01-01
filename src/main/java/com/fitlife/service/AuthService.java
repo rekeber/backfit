@@ -272,8 +272,18 @@ public class AuthService {
         return jwtTokenProvider.validateToken(token);
     }
     
-    private UserResponse mapToUserResponse(User user) {
-        return UserResponse.builder()
+    public UserResponse mapToUserResponse(User user) {
+        log.info("=== MAPPING USER TO RESPONSE ===");
+        log.info("User ID: {}", user.getId());
+        log.info("User email: {}", user.getEmail());
+        log.info("User name: {}", user.getName());
+        log.info("User height: {}", user.getHeight());
+        log.info("User currentWeight: {}", user.getCurrentWeight());
+        log.info("User targetWeight: {}", user.getTargetWeight());
+        log.info("User age: {}", user.getAge());
+        log.info("================================");
+        
+        UserResponse response = UserResponse.builder()
             .id(user.getId())
             .email(user.getEmail())
             .name(user.getName())
@@ -295,5 +305,9 @@ public class AuthService {
             .bmi(user.getBmi())
             .dailyCalories(user.getDailyCalories())
             .build();
+            
+        log.info("Response height: {}", response.getHeight());
+        log.info("Response currentWeight: {}", response.getCurrentWeight());
+        return response;
     }
 }

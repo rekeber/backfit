@@ -119,6 +119,27 @@
             <version>3.34.0</version>
         </dependency>
         
+        <!-- OpenAI API -->
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+            <version>0.18.2</version>
+        </dependency>
+        
+        <!-- Google Vision API -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-vision</artifactId>
+            <version>3.34.0</version>
+        </dependency>
+        
+        <!-- HTTP Client for AI APIs -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.12.0</version>
+        </dependency>
+        
         <!-- Procesamiento de Imágenes -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

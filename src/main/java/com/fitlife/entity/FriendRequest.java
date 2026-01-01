@@ -3,7 +3,6 @@ package com.fitlife.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
@@ -15,8 +14,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@EqualsAndHashCode(exclude = {"sender", "receiver"})
-@ToString(exclude = {"sender", "receiver"})
 public class FriendRequest {
     
     @Id
@@ -36,38 +33,36 @@ public class FriendRequest {
     @Builder.Default
     private Status status = Status.PENDING;
     
+    @Column(length = 500)
+    private String message;
+    
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
     
-    @LastModifiedDate
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    @Column(name = "responded_at")
+    private LocalDateTime respondedAt;
     
     public enum Status {
-        PENDING, ACCEPTED, REJECTED
+        PENDING, ACCEPTED, REJECTED, CANCELLED
     }
     
     // Métodos de negocio
     public void accept() {
         this.status = Status.ACCEPTED;
-        // Agregar como amigos mutuamente
+        this.respondedAt = LocalDateTime.now();
+        
+        // Agregar como amigos
         sender.addFriend(receiver);
     }
     
     public void reject() {
         this.status = Status.REJECTED;
+        this.respondedAt = LocalDateTime.now();
     }
     
-    public boolean isPending() {
-        return this.status == Status.PENDING;
-    }
-    
-    public boolean isAccepted() {
-        return this.status == Status.ACCEPTED;
-    }
-    
-    public boolean isRejected() {
-        return this.status == Status.REJECTED;
+    public void cancel() {
+        this.status = Status.CANCELLED;
+        this.respondedAt = LocalDateTime.now();
     }
 }
