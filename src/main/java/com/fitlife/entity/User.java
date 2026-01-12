@@ -165,6 +165,7 @@ public class User {
             return 0.0;
         }
         
+        // Usar cálculo básico para compatibilidad (el servicio avanzado está disponible en /nutrition-plan)
         // Fórmula Mifflin-St Jeor (para hombres, ajustar según género si se agrega)
         double bmr = (10 * currentWeight) + (6.25 * height) - (5 * age) + 5;
         
@@ -179,10 +180,22 @@ public class User {
         
         double maintenanceCalories = bmr * activityFactor;
         
-        // Ajustar según objetivo
+        // Ajustar según objetivo con cálculos más precisos
         return switch (goal) {
-            case PERDER_PESO -> maintenanceCalories - 500; // Déficit de 500 cal
-            case GANAR_MUSCULO -> maintenanceCalories + 300; // Superávit de 300 cal
+            case PERDER_PESO -> {
+                // Déficit basado en peso actual (más seguro)
+                double deficit = Math.min(500, currentWeight * 7); // Max 7 cal/kg
+                yield Math.max(1500, maintenanceCalories - deficit); // Min 1500 cal
+            }
+            case GANAR_MUSCULO -> {
+                // Superávit moderado según actividad
+                double surplus = switch (activityLevel) {
+                    case SEDENTARIO, LIGERO -> 200;
+                    case MODERADO -> 300;
+                    case ACTIVO, MUY_ACTIVO -> 400;
+                };
+                yield maintenanceCalories + surplus;
+            }
             case MANTENER -> maintenanceCalories;
         };
     }
